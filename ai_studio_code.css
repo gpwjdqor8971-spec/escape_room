@@ -1,0 +1,145 @@
+/* 기본 스타일 */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Malgun Gothic', sans-serif;
+    background-color: #000;
+}
+
+/* 게임 컨테이너 */
+#game-container {
+    position: relative;
+    width: 1280px; /* 이미지 원본 비율에 맞게 조정 */
+    height: 720px;
+    margin: 20px auto;
+    border: 3px solid #444;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 클릭 가능한 핫스팟 */
+.hotspot {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.0); /* 평소에는 투명 */
+    border: 3px solid rgba(255, 0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.hotspot:hover {
+    background-color: rgba(255, 255, 0, 0.3); /* 마우스 올리면 노란색으로 표시 */
+    border: 3px dashed red;
+}
+
+.hotspot.completed {
+    background-color: rgba(0, 255, 0, 0.4);
+    border: 3px solid green;
+    cursor: not-allowed; /* 완료 시 커서 변경 */
+}
+
+/* 핫스팟 좌표 (이미지 크기에 따라 조정 필요) */
+#hotspot-chair { top: 60%; left: 16%; width: 14%; height: 35%; }
+#hotspot-frame { top: 9%; left: 48%; width: 14%; height: 19%; }
+#hotspot-barista { top: 38%; left: 63%; width: 6%; height: 38%; }
+#hotspot-door { top: 40%; left: 44.5%; width: 4%; height: 18%; }
+
+/* 헤더 및 힌트 상자 */
+#header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+}
+#hint-box ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+#hint-box li {
+    background: #333;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* 모달 스타일 */
+.hidden { display: none !important; }
+
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#modal-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+#modal-body {
+    margin: 20px 0;
+    min-height: 200px;
+}
+
+#modal-close-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 미니게임 스타일 */
+.spot-the-difference-container {
+    display: flex;
+    justify-content: space-around;
+}
+.spot-the-difference-container img {
+    width: 45%;
+    border: 2px solid #ccc;
+}
+#jigsaw-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 2px solid #333;
+}
+.jigsaw-piece {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://i.ibb.co/L5rKtkS/frame-art.png'); /* 분할된 이미지 주소 */
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+#recipe-buttons button {
+    margin: 5px;
+    padding: 15px;
+    font-size: 18px;
+    width: 120px;
+}

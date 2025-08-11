@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방탈출: 고요한 카페의 비밀</title>
+    <link rel="stylesheet" href="C:\Users\user-28\Desktop\방탈출\ai_studio_code.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- 배경 이미지 -->
+        <img src="C:\Users\user-28\Desktop\방탈출\Whisk_b058cabb07.jpg">
+
+        <!-- 게임 오브젝트 (클릭 가능 영역) -->
+        <div class="hotspot" id="hotspot-chair" title="의자 조사하기"></div>
+        <div class="hotspot" id="hotspot-frame" title="액자 조사하기"></div>
+        <div class="hotspot" id="hotspot-barista" title="바리스타에게 말 걸기"></div>
+        <div class="hotspot" id="hotspot-door" title="문으로 탈출하기"></div>
+
+        <!-- 게임 타이틀 및 힌트 보관함 -->
+        <div id="header">
+            <h1>고요한 카페의 비밀</h1>
+            <div id="hint-box">
+                <p>획득한 힌트:</p>
+                <ul id="hint-list">
+                    <!-- 힌트가 여기에 추가됩니다 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모달 창 -->
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-content">
+            <h2 id="modal-title"></h2>
+            <div id="modal-body">
+                <!-- 미니게임 콘텐츠가 여기에 로드됩니다 -->
+            </div>
+            <button id="modal-close-btn">닫기</button>
+        </div>
+    </div>
+
+    <script src="C:\Users\user-28\Desktop\방탈출\ai_studio_code.js"></script>
+</body>
+</html>
